@@ -3,12 +3,14 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Déclencher le workflow uniquement sur les commits sur la branche 'main'
+      - main  # Déclenche le workflow lorsque tu pousses sur la branche main
 
 jobs:
   deploy:
-    name: Deploy to GitHub Pages
-    runs-on: ubuntu-latest  # Exécute sur un environnement Ubuntu
+    runs-on: ubuntu-latest  # Utilise un runner Ubuntu pour l'exécution
+
+    permissions:
+      contents: write  # Donne la permission nécessaire pour pousser des changements
 
     steps:
       # Étape 1 : Vérifier le code source
@@ -19,19 +21,19 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 'lts/*'  # Installe la dernière version LTS de Node.js
+          node-version: 'lts/*'  # Installe la version LTS de Node.js
 
       - name: Install dependencies
-        run: npm install  # Installe les dépendances du projet
+        run: npm install  # Installe les dépendances via npm
 
       # Étape 3 : Construire le site avec Astro
       - name: Build site
-        run: npm run build  # Crée le site statique dans le dossier dist/
+        run: npm run build  # Lance la commande de build Astro
 
-      # Étape 4 : Déployer sur GitHub Pages
+      # Étape 4 : Déployer sur GitHub Pages (déploiement à la racine)
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3  # Utilise l'action pour déployer sur GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3  # Action pour déployer sur GitHub Pages
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Authentification via GitHub Token
-          publish_dir: ./dist  # Dossier contenant les fichiers générés par Astro
-          publish_branch: gh-pages  # Branche sur laquelle déployer
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Utilise le token GitHub pour l'authentification
+          publish_dir: ./dist  # Le dossier contenant les fichiers générés par Astro
+          publish_branch: main  # Déploie sur la branche `main` (pas sur gh-pages)
