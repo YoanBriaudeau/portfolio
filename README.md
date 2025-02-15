@@ -1,119 +1,35 @@
-<h1 align="center">Token</h1>
-<h2 align="center">Minimal Astro + Tailwind CSS Starter</h2>
+<h1 align="center">Mon Portfolio</h1>
+<h2 align="center">Portfolio Personnel utilisant Astro + Tailwind CSS</h2>
 
 <p align="center">
     <img alt="hero" width="450" src="public/image.png" />
 </p>
 
-> [!NOTE]
->
-> `token-template` is a modern and minimalistic Astro + Tailwind CSS starter designed for developers and creators. With a sleek black-and-white terminal-inspired design, it features support for Markdown (MD), MDX, RSS feeds, sitemaps, and fully static content, making it perfect for personal portfolios and blogs.
+Bienvenue sur mon portfolio ! Ce site a été créé pour mettre en avant mes projets, mes compétences et mes réalisations. J'ai choisi un design minimaliste et moderne, inspiré des terminaux noir et blanc, afin de créer une expérience utilisateur simple et élégante.
 
-## 🌟 Features
+Le portfolio est construit avec **Astro** et **Tailwind CSS**, deux technologies modernes qui me permettent d'offrir un contenu rapide et dynamique, tout en ayant une personnalisation facile pour répondre à mes besoins.
 
-> **token-template** features intro:
+## 🌟 Fonctionnalités
 
-- **Minimalist Design** – Black-and-white terminal-inspired aesthetics with custom fonts.
-- **Astro + Tailwind CSS** – Built using Astro and styled with Tailwind CSS for easy customization.
-- **Content Support** – Write blog posts or documentation in Markdown (MD) and MDX.
-- **Static and Fast** – Fully static content optimized for performance.
+Mon portfolio inclut plusieurs éléments qui le rendent unique et facile à naviguer :
 
-## 💻 Installation
+- **Design Minimaliste** – L'esthétique épurée noir et blanc, inspirée des interfaces terminales, permet de garder l'attention sur les informations essentielles.
+- **Technologies Modernes** – Utilisation d'Astro et Tailwind CSS pour un site léger et réactif.
+- **Contenu Dynamique** – Le site inclut des projets détaillés, des descriptions de mes compétences, et des articles en Markdown.
+- **Performance Optimisée** – Site entièrement statique, conçu pour une vitesse maximale.
 
-> [!TIP]
-> Remember to update [`src/consts.ts`](https://github.com/ArnavK-09/token-template/blob/main/src/consts.ts)
+## 👤 À propos de moi
 
-###### terminal
+Je suis un passionné de développement web, toujours à la recherche de nouvelles opportunités pour apprendre et créer. Mon portfolio reflète ma volonté de combiner simplicité et efficacité, tout en utilisant les technologies les plus modernes.
 
-```bash
-# Clone the repository
-git clone https://github.com/ArnavK-09/token-template.git my-portfolio
-cd my-portfolio
+## 💻 Auteur du thème
 
-# Install dependencies
-npm install
+Le thème **token-template** a été créé par [Arnav K](https://github.com/ArnavK-09), vous pouvez consulter son travail et d'autres projets sur son [GitHub](https://github.com/ArnavK-09).
 
-# Run the development server
-npm run dev
-```
+## 📄 Licence
 
-## 📷 Screenshots
-
-> Here's a working and expected screenshot of **token-template**
-
-| Landing Page                              |
-| ----------------------------------------- |
-| ![Demo](/public/screenshot.png) |
-
-| [Lighthouse Results](https://pagespeed.web.dev/analysis/https-token-template-deno-dev/o4lgrcn8pd?form_factor=desktop)                              |
-| ----------------------------------------- |
-| ![results](/public/lighthouse.png) |
+Ce portfolio est un projet personnel, et bien que le thème utilisé soit sous licence **ISC**, toutes les personnalisations et ajouts sont spécifiquement liés à mon travail. Vous pouvez consulter les détails de la licence dans le fichier [LICENSE](https://github.com/ArnavK-09/token-template/blob/main/LICENSE).
 
 ---
 
-## 💻 Contributing
 
-> [!TIP]  
-> We welcome contributions to improve **token-template**! If you have suggestions, bug fixes, or new feature ideas, follow these steps:
-
-1. **Fork the Repository**  
-   Click the **Fork** button at the top-right of the repo page.
-
-2. **Clone Your Fork**  
-   Clone the repo locally:
-
-   ```bash
-   git clone https://github.com/ArnavK-09/token-template.git
-   ```
-
-3. **Create a Branch**  
-   Create a new branch for your changes:
-
-   ```bash
-   git checkout -b your-feature-branch
-   ```
-
-4. **Make Changes**  
-   Implement your changes (bug fixes, features, etc.).
-
-5. **Commit and Push**  
-   Commit your changes and push the branch:
-
-   ```bash
-   git commit -m "feat(scope): description"
-   git push origin your-feature-branch
-   ```
-
-6. **Open a Pull Request**  
-   Open a PR with a detailed description of your changes.
-
-7. **Collaborate and Merge**  
-   The maintainers will review your PR, request changes if needed, and merge it once approved.
-
-## 🙋‍♂️ Issues
-
-Found a bug or need help? Please create an issue on the [GitHub repository](https://github.com/ArnavK-09/token-template/issues) with a detailed description.
-
-## 👤 Author
-
-<table>
-  <tbody>
-    <tr>
-        <td align="center" valign="top" width="14.28%"><a href="https://github.com/ArnavK-09"><img src="https://github.com/ArnavK-09.png?s=100" width="130px;" alt="Arnav K"/></a><br /><a href="https://github.com/ArnavK-09"<h4><b>Arnav K</b></h3></a></td>
-    </tr>
-  </tbody>
-</table>
-
----
-
-<h2 align="center">📄 License</h2>
-
-<p align="center">
-<strong>token-template</strong> is licensed under the <code>ISC</code> License. See the <a href="https://github.com/ArnavK-09/token-template/blob/main/LICENSE">LICENSE</a> file for more details.
-</p>
-
----
-
-<p align="center">
-    <strong>🌟 If you find this project helpful, please give it a star on GitHub! 🌟</strong>
-</p>
