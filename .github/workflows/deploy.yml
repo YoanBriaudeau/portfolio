@@ -1,44 +1,37 @@
-name: Deploy
+name: Deploy to GitHub Pages
+
 on:
   push:
-    branches: main
-  pull_request:
-    branches: main
+    branches:
+      - main  # Déclencher le workflow uniquement sur les commits sur la branche 'main'
 
 jobs:
   deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-
-    permissions:
-      id-token: write # Needed for auth with Deno Deploy
-      contents: read # Needed to clone the repository
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest  # Exécute sur un environnement Ubuntu
 
     steps:
-      - name: Clone repository
-        uses: actions/checkout@v4
+      # Étape 1 : Vérifier le code source
+      - name: Checkout repository
+        uses: actions/checkout@v3  # Clone le dépôt
 
-      - name: Install Deno
-        uses: denoland/setup-deno@v2
+      # Étape 2 : Installer Node.js et les dépendances
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          deno-version: v1.x
+          node-version: 'lts/*'  # Installe la dernière version LTS de Node.js
 
-      - name: Install Node.js
-        uses: actions/setup-node@v4
+      - name: Install dependencies
+        run: npm install  # Installe les dépendances du projet
+
+      # Étape 3 : Construire le site avec Astro
+      - name: Build site
+        run: npm run build  # Crée le site statique dans le dossier dist/
+
+      # Étape 4 : Déployer sur GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3  # Utilise l'action pour déployer sur GitHub Pages
         with:
-          node-version: lts/*
-
-      - name: Install step
-        run: "npm install"
-
-      - name: Build step
-        run: "npm run build"
-
-      - name: Upload to Deno Deploy
-        uses: denoland/deployctl@v1
-        with:
-          project: "token-template"
-          entrypoint: "jsr:@std/http/file-server"
-          root: "dist"
-          
-          
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Authentification via GitHub Token
+          publish_dir: ./dist  # Dossier contenant les fichiers générés par Astro
+          publish_branch: gh-pages  # Branche sur laquelle déployer
