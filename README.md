@@ -24,7 +24,7 @@ Je suis un passionné de développement web, toujours à la recherche de nouvell
 
 ## 💻 Auteur du thème
 
-Le thème **token-template** a été créé par [Arnav K](https://github.com/ArnavK-09), vous pouvez consulter son travail et d'autres projets sur son [GitHub](https://github.com/ArnavK-09).
+Le thème **token-template** a été créé par [Arnav K](https://github.com/ArnavK-09), vous pouvez consulter son travail et d'autres projets sur son [GitHub](https://github.com/ArnavK-09/token-template).
 
 ## 📄 Licence
 
